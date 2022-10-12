@@ -1,0 +1,18 @@
+.step-item {
+  @apply relative flex flex-col justify-center items-center w-36;
+}
+.step-item:not(:first-child)::before {
+  @apply content-[""] bg-slate-300 absolute w-full h-1 right-2/4 top-1/3 -translate-y-2/4;
+}
+.step {
+  @apply relative flex justify-center items-center w-10 h-10 z-10 bg-slate-700 rounded-full font-semibold text-white;
+}
+.active .step {
+  @apply bg-sky-600;
+}
+.btn {
+  @apply px-6 py-3 rounded-md bg-blue-500 text-white font-semibold;
+}
+.completed .step {
+  @apply bg-green-500;
+}
