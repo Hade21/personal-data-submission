@@ -82,7 +82,7 @@ export default function StepProgress({ steps, currStep }) {
                 <div className="step">
                   {index + 1 < currStep || completed ? <TiTick /> : index + 1}
                 </div>
-                <p className="hidden text-slate-700 sm:block">{step}</p>
+                <p className="hidden text-xl text-slate-700 sm:block">{step}</p>
               </div>
             );
           })}

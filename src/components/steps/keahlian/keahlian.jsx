@@ -50,13 +50,10 @@ export default function Keahlian() {
             return (
               <div
                 key={index}
-                className="wrapper flex flex-col gap-2 rounded bg-white p-4"
+                className="wrapper flex flex-col gap-2 rounded bg-white p-4 text-xl"
               >
                 <div className="flex flex-col">
-                  <label
-                    htmlFor="namaKeahlian"
-                    className="text-sm sm:text-base"
-                  >
+                  <label htmlFor="namaKeahlian" className="text-sm sm:text-xl">
                     Skill
                   </label>
                   <input
@@ -72,7 +69,7 @@ export default function Keahlian() {
                 <div className="flex flex-col">
                   <label
                     htmlFor="tingkatKeahlian"
-                    className="text-sm sm:text-base"
+                    className="text-sm sm:text-xl"
                   >
                     Tingkat Kemahiran
                   </label>
@@ -97,7 +94,7 @@ export default function Keahlian() {
         <div className="flex justify-end">
           <button
             type="button"
-            className="rounded bg-blue-500 px-4 py-2 font-medium text-white"
+            className="rounded bg-blue-500 px-4 py-2 text-sm font-medium text-white sm:text-xl"
             onClick={handleMore}
           >
             Tambah Keahlian

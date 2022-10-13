@@ -52,12 +52,12 @@ export default function RiwayatPekerjaan() {
             return (
               <div
                 key={index}
-                className="wrapper flex w-full flex-col gap-3 rounded bg-white p-4"
+                className="wrapper flex w-full flex-col gap-3 rounded bg-white p-4 text-xl"
               >
                 <div className="flex flex-col">
                   <label
                     htmlFor="namaPerusahaan"
-                    className="text-base sm:text-sm"
+                    className="text-sm sm:text-xl"
                   >
                     Nama Perusahaan
                   </label>
@@ -71,7 +71,7 @@ export default function RiwayatPekerjaan() {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="jabatan" className="text-base sm:text-sm">
+                  <label htmlFor="jabatan" className="text-sm sm:text-xl">
                     Jabatan
                   </label>
                   <input
@@ -84,7 +84,7 @@ export default function RiwayatPekerjaan() {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="alamat" className="text-base sm:text-sm">
+                  <label htmlFor="alamat" className="text-sm sm:text-xl">
                     Alamat
                   </label>
                   <input
@@ -97,10 +97,7 @@ export default function RiwayatPekerjaan() {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label
-                    htmlFor="mulaiBekerja"
-                    className="text-base sm:text-sm"
-                  >
+                  <label htmlFor="mulaiBekerja" className="text-sm sm:text-xl">
                     Mulai Bekerja
                   </label>
                   <input
@@ -115,7 +112,7 @@ export default function RiwayatPekerjaan() {
                 <div className="flex flex-col">
                   <label
                     htmlFor="selesaiBekerja"
-                    className="text-base sm:text-sm"
+                    className="text-sm sm:text-xl"
                   >
                     Selesai Bekerja
                   </label>
@@ -131,7 +128,7 @@ export default function RiwayatPekerjaan() {
                 <div className="flex flex-col">
                   <label
                     htmlFor="alasanBerhenti"
-                    className="text-base sm:text-sm"
+                    className="text-sm sm:text-xl"
                   >
                     Alasan Berhenti
                   </label>
@@ -151,7 +148,7 @@ export default function RiwayatPekerjaan() {
         <div className="add self-end">
           <button
             type="button"
-            className="rounded bg-blue-500 px-4 py-2 font-medium text-white"
+            className="rounded bg-blue-500 px-4 py-2 text-sm font-medium text-white sm:text-xl"
             onClick={handleMore}
           >
             Tambah Riwayat Pekerjaan

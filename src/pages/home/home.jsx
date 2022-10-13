@@ -7,13 +7,13 @@ export const Home = () => {
 
   return (
     <main className="flex w-full flex-col items-center justify-center py-12">
-      <h1 className="text-center text-2xl font-bold text-slate-700 sm:text-4xl">
+      <h1 className="text-center text-2xl font-bold text-slate-700 sm:text-5xl">
         Daftar Member
       </h1>
       <div className="mt-14 table">
         <div className="addMember">
           <button
-            className="rounded bg-blue-500 px-4 py-2 text-xs font-semibold text-white sm:text-base"
+            className="rounded bg-blue-500 px-4 py-2 text-xs font-semibold text-white sm:px-6 sm:py-3 sm:text-xl"
             onClick={() => navigate("/add")}
           >
             Tambah Data
@@ -21,7 +21,7 @@ export const Home = () => {
         </div>
         {data && (
           <table className="mt-4">
-            <thead className="bg-sky-200 text-sm sm:text-base">
+            <thead className="bg-sky-200 text-sm sm:text-xl">
               <tr>
                 <th className="borderborder-r-white border-r border-l border-l-blue-200 p-2">
                   No
@@ -44,21 +44,21 @@ export const Home = () => {
                   console.log(item.id);
                   return (
                     <tr key={index}>
-                      <td className="border border-blue-200 p-2 text-right text-sm sm:text-base ">
+                      <td className="border border-blue-200 p-2 text-right text-sm sm:px-4 sm:py-3 sm:text-xl ">
                         {index + 1}
                       </td>
-                      <td className="border border-blue-200 p-2 text-sm sm:text-base">
+                      <td className="border border-blue-200 p-2 text-sm sm:px-4 sm:py-3 sm:text-xl">
                         {item.personalData.nama}
                       </td>
-                      <td className="hidden border border-blue-200 p-2 text-sm sm:block sm:text-base">
+                      <td className="hidden border border-blue-200 p-2 text-sm sm:block sm:px-4 sm:py-3 sm:text-xl">
                         {item.personalData.email}
                       </td>
-                      <td className="hidden border border-blue-200 p-2 text-sm sm:block sm:text-base">
+                      <td className="hidden border border-blue-200 p-2 text-sm sm:block sm:px-4 sm:py-3 sm:text-xl">
                         {item.personalData.noHp}
                       </td>
-                      <td className="border border-blue-200 p-2 text-sm sm:text-base">
+                      <td className="border border-blue-200 p-2 text-sm sm:px-4 sm:py-3 sm:text-xl">
                         <button
-                          className="rounded bg-sky-500 p-2 text-sm font-medium text-white"
+                          className="rounded bg-sky-500 p-2 text-sm font-medium text-white sm:text-xl"
                           onClick={() => navigate(`/${item.id}`)}
                         >
                           Lihat Detail

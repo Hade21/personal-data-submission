@@ -30,10 +30,10 @@ export default function PersonalData() {
   }, [dataDiri]);
   return (
     <div>
-      <form onSubmit={handleSubmit} className="text-base">
+      <form onSubmit={handleSubmit} className="text-xl">
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <label htmlFor="nama" className="text-sm">
+            <label htmlFor="nama" className="text-sm sm:text-xl">
               Nama Lengkap
             </label>
             <input
@@ -47,7 +47,7 @@ export default function PersonalData() {
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="ttl" className="text-sm sm:text-base">
+            <label htmlFor="ttl" className="text-sm sm:text-xl">
               Tempat, Tanggal Lahir
             </label>
             <input
@@ -57,11 +57,12 @@ export default function PersonalData() {
               className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
               value={dataDiri.ttl}
               onChange={handleChange}
-              //required
+              placeholder="format : Jakarta/22 Januari 1998"
+              required
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="gender" className="text-sm sm:text-base">
+            <label htmlFor="gender" className="text-sm sm:text-xl">
               Jenis Kelamin
             </label>
             <select
@@ -78,7 +79,7 @@ export default function PersonalData() {
             </select>
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="kewarganegaraan" className="text-sm sm:text-base">
+            <label htmlFor="kewarganegaraan" className="text-sm sm:text-xl">
               Kewarganegaraan
             </label>
             <select
@@ -100,7 +101,7 @@ export default function PersonalData() {
             </select>
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="agama" className="text-sm sm:text-base">
+            <label htmlFor="agama" className="text-sm sm:text-xl">
               Agama
             </label>
             <select
@@ -122,7 +123,7 @@ export default function PersonalData() {
             </select>
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="alamat" className="text-sm sm:text-base">
+            <label htmlFor="alamat" className="text-sm sm:text-xl">
               Alamat
             </label>
             <textarea
@@ -137,7 +138,7 @@ export default function PersonalData() {
             ></textarea>
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="email" className="text-sm sm:text-base">
+            <label htmlFor="email" className="text-sm sm:text-xl">
               Email
             </label>
             <input
@@ -151,7 +152,7 @@ export default function PersonalData() {
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="noHp" className="text-sm sm:text-base">
+            <label htmlFor="noHp" className="text-sm sm:text-xl">
               No. HP
             </label>
             <input
@@ -162,6 +163,7 @@ export default function PersonalData() {
               className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
               value={dataDiri.noHp}
               onChange={handleChange}
+              placeholder="12 digit nomor hp"
               required
             />
           </div>

@@ -46,7 +46,7 @@ export default function RiwayatPendidikan() {
   return (
     <div>
       <form onSubmit={handleSubmit} className="flex flex-col gap-8">
-        <div className="data flex flex-col gap-14 text-base">
+        <div className="data flex flex-col gap-14 text-xl">
           {riwayatPendidikan.map((item, index) => {
             return (
               <div
@@ -54,7 +54,9 @@ export default function RiwayatPendidikan() {
                 className="wrapper flex flex-col gap-3 rounded bg-white p-4"
               >
                 <div className="flex flex-col">
-                  <label htmlFor="namaSekolah">Nama Sekolah</label>
+                  <label htmlFor="namaSekolah" className="text-sm sm:text-xl">
+                    Nama Sekolah
+                  </label>
                   <input
                     type="text"
                     name="namaSekolah"
@@ -66,7 +68,7 @@ export default function RiwayatPendidikan() {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="jurusan" className="text-sm sm:text-base">
+                  <label htmlFor="jurusan" className="text-sm sm:text-xl">
                     Jurusan
                   </label>
                   <input
@@ -80,7 +82,7 @@ export default function RiwayatPendidikan() {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="tahunMasuk" className="text-sm sm:text-base">
+                  <label htmlFor="tahunMasuk" className="text-sm sm:text-xl">
                     Tahun Masuk
                   </label>
                   <input
@@ -94,7 +96,7 @@ export default function RiwayatPendidikan() {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="tahunLulus" className="text-sm sm:text-base">
+                  <label htmlFor="tahunLulus" className="text-sm sm:text-xl">
                     Tahun Lulus
                   </label>
                   <input
@@ -108,7 +110,7 @@ export default function RiwayatPendidikan() {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="kota" className="text-sm sm:text-base">
+                  <label htmlFor="kota" className="text-sm sm:text-xl">
                     Kota
                   </label>
                   <input
@@ -128,7 +130,7 @@ export default function RiwayatPendidikan() {
         <div className="addMore self-end">
           <button
             type="button"
-            className="rounded bg-blue-500 px-4 py-2 font-medium text-white"
+            className="rounded bg-blue-500 px-4 py-2 text-sm font-medium text-white sm:text-xl"
             onClick={handleMore}
           >
             Tambah Riwayat Pendidikan
