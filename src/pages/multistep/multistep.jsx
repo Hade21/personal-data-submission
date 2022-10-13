@@ -12,11 +12,11 @@ export default function Multistep() {
   }, [currStep]);
 
   return (
-    <>
+    <div className="h-ful mx-auto flex w-5/6 flex-col gap-14 py-14">
       <StepProgress steps={steps} currStep={currStep} />
-      <div className="contents">
+      <div className="content rounded bg-slate-100 p-8">
         <ContentSelector currStep={currStep} />
       </div>
-    </>
+    </div>
   );
 }

@@ -12,6 +12,7 @@
     "@reduxjs/toolkit": "^1.8.6",
     "dexie": "^3.2.2",
     "dexie-react-hooks": "^1.1.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-form-stepper": "^2.0.3",

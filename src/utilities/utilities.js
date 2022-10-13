@@ -24,6 +24,8 @@ export function getData() {
   return data;
 }
 
-export async function getDataById(id) {
-  return await db.member.get(id);
+export function getDataById(id) {
+  const dataID = Number(id);
+  const data = useLiveQuery(() => db.member.get(dataID));
+  return data;
 }

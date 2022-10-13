@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { setKeahlian, setReset } from "../../../features/dataSlices/dataSlices";
 import { decrement } from "../../../features/pageSlices/pageSlices";
 import { saveData } from "../../../utilities/utilities";
 
 export default function Keahlian() {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const keahlian = useSelector((state) => state.data.keahlian);
   const pendidikan = useSelector((state) => state.data.pendidikan);
@@ -25,9 +27,8 @@ export default function Keahlian() {
     e.preventDefault();
     const data = { dataDiri, pendidikan, pekerjaan, keahlian };
     const id = saveData(data);
-    if (id) {
-      dispatch(setReset());
-    }
+    dispatch(setReset());
+    navigate("/");
   };
   const handleChange = (e, index) => {
     const { name, value } = e.target;
@@ -43,27 +44,42 @@ export default function Keahlian() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <div className="data">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-14">
+        <div className="data flex flex-col gap-14">
           {listKeahlian.map((item, index) => {
             return (
-              <div key={index} className="wrapper">
+              <div
+                key={index}
+                className="wrapper flex flex-col gap-2 rounded bg-white p-4"
+              >
                 <div className="flex flex-col">
-                  <label htmlFor="namaKeahlian">Skill</label>
+                  <label
+                    htmlFor="namaKeahlian"
+                    className="text-sm sm:text-base"
+                  >
+                    Skill
+                  </label>
                   <input
                     type="text"
                     name="namaKeahlian"
                     id="namaKeahlian"
+                    className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
                     value={item.namaKeahlian}
                     onChange={(e) => handleChange(e, index)}
                     required
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="tingkatKeahlian">Tingkat Kemahiran</label>
+                  <label
+                    htmlFor="tingkatKeahlian"
+                    className="text-sm sm:text-base"
+                  >
+                    Tingkat Kemahiran
+                  </label>
                   <select
                     name="tingkatKeahlian"
                     id="tingkatKEahlian"
+                    className="rounded border-2 border-slate-300 bg-white px-4 py-2 focus:border-blue-300 focus:outline-none"
                     value={item.tingkatKeahlian}
                     onChange={(e) => handleChange(e, index)}
                     required
@@ -79,11 +95,15 @@ export default function Keahlian() {
           })}
         </div>
         <div className="flex justify-end">
-          <button type="button" onClick={handleMore}>
+          <button
+            type="button"
+            className="rounded bg-blue-500 px-4 py-2 font-medium text-white"
+            onClick={handleMore}
+          >
             Tambah Keahlian
           </button>
         </div>
-        <div className="buttons flex items-center justify-between gap-40">
+        <div className="buttons flex flex-col items-center justify-between gap-8 sm:flex-row">
           <div className="prev">
             <button
               type="button"

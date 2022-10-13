@@ -30,35 +30,44 @@ export default function PersonalData() {
   }, [dataDiri]);
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="text-base">
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <label htmlFor="nama">Nama Lengkap</label>
+            <label htmlFor="nama" className="text-sm">
+              Nama Lengkap
+            </label>
             <input
               type="text"
               name="nama"
               id="nama"
+              className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
               onChange={handleChange}
               value={dataDiri.nama}
               required
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="ttl">Tempat, Tanggal Lahir</label>
+            <label htmlFor="ttl" className="text-sm sm:text-base">
+              Tempat, Tanggal Lahir
+            </label>
             <input
               type="text"
               name="ttl"
               id="ttl"
+              className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
               value={dataDiri.ttl}
               onChange={handleChange}
               //required
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="gender">Jenis Kelamin</label>
+            <label htmlFor="gender" className="text-sm sm:text-base">
+              Jenis Kelamin
+            </label>
             <select
               name="gender"
               id="gender"
+              className="rounded border-2 border-slate-300 bg-white px-4 py-2 focus:border-blue-300 focus:outline-none"
               value={dataDiri.gender}
               onChange={handleChange}
               required
@@ -69,10 +78,13 @@ export default function PersonalData() {
             </select>
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="kewarganegaraan">Kewarganegaraan</label>
+            <label htmlFor="kewarganegaraan" className="text-sm sm:text-base">
+              Kewarganegaraan
+            </label>
             <select
               name="kewarganegaraan"
               id="kewarganegaraan"
+              className="rounded border-2 border-slate-300 bg-white px-4 py-2 focus:border-blue-300 focus:outline-none"
               value={dataDiri.kewarganegaraan}
               onChange={handleChange}
               required
@@ -88,10 +100,13 @@ export default function PersonalData() {
             </select>
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="agama">Agama</label>
+            <label htmlFor="agama" className="text-sm sm:text-base">
+              Agama
+            </label>
             <select
               name="agama"
               id="agama"
+              className="rounded border-2 border-slate-300 bg-white px-4 py-2 focus:border-blue-300 focus:outline-none"
               value={dataDiri.agama}
               onChange={handleChange}
               required
@@ -107,41 +122,50 @@ export default function PersonalData() {
             </select>
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="alamat">Alamat</label>
+            <label htmlFor="alamat" className="text-sm sm:text-base">
+              Alamat
+            </label>
             <textarea
               name="alamat"
               id="alamat"
               cols="30"
-              rows="10"
+              rows="3"
+              className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
               value={dataDiri.alamat}
               onChange={handleChange}
               required
             ></textarea>
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email" className="text-sm sm:text-base">
+              Email
+            </label>
             <input
               type="email"
               name="email"
               id="email"
+              className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
               value={dataDiri.email}
               onChange={handleChange}
               required
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="noHp">No. HP</label>
+            <label htmlFor="noHp" className="text-sm sm:text-base">
+              No. HP
+            </label>
             <input
               type="tel"
               pattern="[0-9]{12}"
               name="noHp"
               id="noHp"
+              className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
               value={dataDiri.noHp}
               onChange={handleChange}
               required
             />
           </div>
-          <div className="buttons flex items-center justify-between gap-40">
+          <div className="button mt-16 self-center">
             <button type="submit" disabled={false}>
               <span className="btn">Selanjutnya</span>
             </button>

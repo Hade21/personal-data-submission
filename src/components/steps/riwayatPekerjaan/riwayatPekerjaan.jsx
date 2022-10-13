@@ -46,67 +46,100 @@ export default function RiwayatPekerjaan() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <div className="data">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-14">
+        <div className="data flex flex-col gap-12">
           {riwayatPekerjaan.map((item, index) => {
             return (
-              <div key={index} className="wrapper">
+              <div
+                key={index}
+                className="wrapper flex w-full flex-col gap-3 rounded bg-white p-4"
+              >
                 <div className="flex flex-col">
-                  <label htmlFor="namaPerusahaan">Nama Perusahaan</label>
+                  <label
+                    htmlFor="namaPerusahaan"
+                    className="text-base sm:text-sm"
+                  >
+                    Nama Perusahaan
+                  </label>
                   <input
                     type="text"
                     name="namaPerusahaan"
                     id="namaPerusahaan"
+                    className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
                     value={item.namaPerusahaan}
                     onChange={(e) => handleChange(e, index)}
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="jabatan">Jabatan</label>
+                  <label htmlFor="jabatan" className="text-base sm:text-sm">
+                    Jabatan
+                  </label>
                   <input
                     type="text"
                     name="jabatan"
                     id="jabatan"
+                    className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
                     value={item.jabatan}
                     onChange={(e) => handleChange(e, index)}
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="alamat">Alamat</label>
+                  <label htmlFor="alamat" className="text-base sm:text-sm">
+                    Alamat
+                  </label>
                   <input
                     type="text"
                     name="alamat"
                     id="alamat"
+                    className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
                     value={item.alamat}
                     onChange={(e) => handleChange(e, index)}
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="mulaiBekerja">Mulai Bekerja</label>
+                  <label
+                    htmlFor="mulaiBekerja"
+                    className="text-base sm:text-sm"
+                  >
+                    Mulai Bekerja
+                  </label>
                   <input
                     type="date"
                     name="mulaiBekerja"
                     id="mulaiBekerja"
+                    className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
                     value={item.mulaiBekerja}
                     onChange={(e) => handleChange(e, index)}
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="selesaiBekerja">Selesai Bekerja</label>
+                  <label
+                    htmlFor="selesaiBekerja"
+                    className="text-base sm:text-sm"
+                  >
+                    Selesai Bekerja
+                  </label>
                   <input
                     type="date"
                     name="selesaiBekerja"
                     id="selesaiBekerja"
+                    className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
                     value={item.selesaiBekerja}
                     onChange={(e) => handleChange(e, index)}
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="alasanBerhenti">Alasan Berhenti</label>
+                  <label
+                    htmlFor="alasanBerhenti"
+                    className="text-base sm:text-sm"
+                  >
+                    Alasan Berhenti
+                  </label>
                   <input
                     type="text"
                     name="alasanBerhenti"
                     id="alasanBerhenti"
+                    className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
                     value={item.alasanBerhenti}
                     onChange={(e) => handleChange(e, index)}
                   />
@@ -115,12 +148,16 @@ export default function RiwayatPekerjaan() {
             );
           })}
         </div>
-        <div className="add">
-          <button type="button" onClick={handleMore}>
+        <div className="add self-end">
+          <button
+            type="button"
+            className="rounded bg-blue-500 px-4 py-2 font-medium text-white"
+            onClick={handleMore}
+          >
             Tambah Riwayat Pekerjaan
           </button>
         </div>
-        <div className="buttons flex items-center justify-between gap-40">
+        <div className="buttons flex flex-col items-center justify-between gap-8 sm:flex-row">
           <div className="prev">
             <button
               type="button"

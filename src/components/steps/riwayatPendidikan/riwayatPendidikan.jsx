@@ -45,61 +45,77 @@ export default function RiwayatPendidikan() {
   }, [riwayatPendidikan]);
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <div className="data">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-8">
+        <div className="data flex flex-col gap-14 text-base">
           {riwayatPendidikan.map((item, index) => {
             return (
-              <div key={index} className="wrapper">
+              <div
+                key={index}
+                className="wrapper flex flex-col gap-3 rounded bg-white p-4"
+              >
                 <div className="flex flex-col">
                   <label htmlFor="namaSekolah">Nama Sekolah</label>
                   <input
                     type="text"
                     name="namaSekolah"
                     id="namaSekolah"
+                    className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
                     value={item.namaSekolah}
                     onChange={(e) => handleChange(e, index)}
                     required
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="jurusan">Jurusan</label>
+                  <label htmlFor="jurusan" className="text-sm sm:text-base">
+                    Jurusan
+                  </label>
                   <input
                     type="text"
                     name="jurusan"
                     id="jurusan"
+                    className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
                     value={item.jurusan}
                     onChange={(e) => handleChange(e, index)}
                     required
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="tahunMasuk">Tahun Masuk</label>
+                  <label htmlFor="tahunMasuk" className="text-sm sm:text-base">
+                    Tahun Masuk
+                  </label>
                   <input
                     type="date"
                     name="tahunMasuk"
                     id="tahunMasuk"
+                    className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
                     value={item.tahunMasuk}
                     onChange={(e) => handleChange(e, index)}
                     required
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="tahunLulus">Tahun Lulus</label>
+                  <label htmlFor="tahunLulus" className="text-sm sm:text-base">
+                    Tahun Lulus
+                  </label>
                   <input
                     type="date"
                     name="tahunLulus"
                     id="tahunLulus"
+                    className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
                     value={item.tahunLulus}
                     onChange={(e) => handleChange(e, index)}
                     required
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="kota">Kota</label>
+                  <label htmlFor="kota" className="text-sm sm:text-base">
+                    Kota
+                  </label>
                   <input
                     type="text"
                     name="kota"
                     id="kota"
+                    className="rounded border-2 border-slate-300 px-4 py-2 focus:border-blue-300 focus:outline-none"
                     value={item.kota}
                     onChange={(e) => handleChange(e, index)}
                     required
@@ -109,12 +125,16 @@ export default function RiwayatPendidikan() {
             );
           })}
         </div>
-        <div className="addMore">
-          <button type="button" className="" onClick={handleMore}>
+        <div className="addMore self-end">
+          <button
+            type="button"
+            className="rounded bg-blue-500 px-4 py-2 font-medium text-white"
+            onClick={handleMore}
+          >
             Tambah Riwayat Pendidikan
           </button>
         </div>
-        <div className="buttons flex items-center justify-between gap-40">
+        <div className="buttons mt-8 flex flex-col items-center justify-between gap-8 sm:flex-row">
           <div className="prev">
             <button
               type="button"
